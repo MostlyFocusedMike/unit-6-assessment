@@ -15,39 +15,10 @@ body {
 	color: white;
 }
 
-.location,
-.temperature {
-	height: 30vh;
-	width: 50%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.temperature {
-	flex-direction: column;
-}
-
-.degree-container {
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-}
-
-.degree-container p {
-	margin: 1rem;
-	font-size: 2rem;
-}
-
-.degree-container button {
-	font-size: 40px;
-}
-
 #weather-condition-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -1.4rem;
 }
 
 button {

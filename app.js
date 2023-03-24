@@ -38,16 +38,15 @@ const setWeatherConditionElements = ({ text, icon }) => {
   const locationElement = document.querySelector('#condition-description');
   const weatherIcon = document.querySelector('#weather-icon');
 
-  locationElement.textContent = text;
+  locationElement.textContent = `Current condition: ${text}`;
   weatherIcon.src = `http:${icon}`;
-  weatherIcon.alt = text;
 };
 
 // Notice how we use closures here to isolate state and logic to one function
 const handleTemperatureToggleButton = (degreesC, degreesF) => {
-  const getFormattedTemperatures = (cOrF) => {
+  const getFormattedTemperatures = (typeOfTemperature) => {
     const temperatures = { C: degreesC, F: degreesF };
-    return `${temperatures[cOrF]} °${cOrF}`;
+    return `${temperatures[typeOfTemperature]} °${typeOfTemperature}`;
   };
 
   let temperatureUnit = 'C';
