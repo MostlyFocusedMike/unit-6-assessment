@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+	font-family: sans-serif;
+	color: white;
+}
+
+.location,
+.temperature {
+	height: 30vh;
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.temperature {
+	flex-direction: column;
+}
+
+.degree-container {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.degree-container p {
+	margin: 1rem;
+	font-size: 2rem;
+}
+
+.degree-container button {
+	font-size: 40px;
+}
+
+#weather-condition-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -1.4rem;
+}
+
+button {
+  background: transparent;
+  border: 0.2rem solid white;
+  border-radius: 1rem;
+  color: white;
+  width: 10rem;
+  height: 3.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+button:active {
+  background: black;
+  border: 0.2rem solid black;
+  color: white;
+}
+
+/*
+  https://stackoverflow.com/questions/17233804/how-to-prevent-sticky-hover-effects-for-buttons-on-touch-devices
+  https://caniuse.com/mdn-css_at-rules_media_hover
+*/
+@media (hover: hover) {
+  button:hover {
+    background: white;
+    color: black;
+    font-size: 1.6rem;
+  }
+}
